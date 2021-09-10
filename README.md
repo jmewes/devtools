@@ -19,14 +19,13 @@ for an overview of how to build and contribute to the project.
 
 ### Run pub get for all modules
 
-```
+```bash
 {
 PUBSPECS=$(find . -name "pubspec.yaml")
 
 for p in $PUBSPECS
 do
   PUBSPEC_DIR="${p%pubspec.*}"
-  echo "hello" $PUBSPEC_DIR
   cd $PUBSPEC_DIR
   flutter pub get
   cd -
